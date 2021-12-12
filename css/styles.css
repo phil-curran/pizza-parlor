@@ -1,0 +1,9 @@
+#colored {
+  border: 1px solid black;
+  padding: 25px;
+}
+
+.meats, .cheeses, .veggies {
+  display: block;
+  margin: 0 8px 4px 8px;
+}
