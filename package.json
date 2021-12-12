@@ -4,7 +4,9 @@
   "description": "Epicodus Object-Oriented Programming Homework",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/XLCM/pizza-parlor/issues"
   },
-  "homepage": "https://github.com/XLCM/pizza-parlor#readme"
+  "homepage": "https://github.com/XLCM/pizza-parlor#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "dependencies": {
+    "bulma": "^0.9.3"
+  }
 }
