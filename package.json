@@ -1,0 +1,23 @@
+{
+  "name": "pizza-parlor",
+  "version": "1.0.0",
+  "description": "Epicodus Object-Oriented Programming Homework",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XLCM/pizza-parlor.git"
+  },
+  "keywords": [
+    "pizza",
+    "parlor"
+  ],
+  "author": "Phil Curran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/XLCM/pizza-parlor/issues"
+  },
+  "homepage": "https://github.com/XLCM/pizza-parlor#readme"
+}
