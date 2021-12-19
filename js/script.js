@@ -1,29 +1,6 @@
 const basePrice = 10;
 const taxRate = 1.1;
 
-const meats = {
-  pepperoni: 1.5,
-  sausage: 1.5,
-  salami: 1.5,
-  proscuitto: 1.5,
-};
-
-const cheeses = {
-  mozarella: 1,
-  parmesan: 1,
-  asiago: 1,
-};
-
-const veggies = {
-  mushrooms: 1,
-  onions: 1,
-  olives: 1,
-  broccoli: 1,
-  mushrooms: 1,
-  garlic: 1,
-  basil: 1,
-};
-
 let getSize = document.getElementsByClassName("size");
 
 let sizeMultiplier = () => {
@@ -37,6 +14,39 @@ let sizeMultiplier = () => {
     console.log("no size selected");
   }
 };
+
+let meat = Array.from(document.getElementsByClassName("meat"));
+
+let meatCount = 0;
+
+let a = () => {
+  meat.forEach((option) => {
+    if (option.checked) {
+      meatCount += 1.5;
+    }
+  });
+};
+
+let cheese = Array.from(document.getElementsByClassName("cheese"));
+
+let cheeseCount = 0;
+
+let b = () => {
+  cheese.forEach((option) => {
+    if (option.checked) {
+      cheeseCount += 1;
+    }
+  });
+};
+
+var form = document.querySelector("form");
+form.addEventListener("change", function () {
+  console.log("form change");
+  a();
+  console.log(meatCount);
+  b();
+  console.log(cheeseCount);
+});
 
 function Pizza(size) {
   this.size = size;

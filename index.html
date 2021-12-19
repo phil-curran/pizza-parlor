@@ -17,174 +17,191 @@
       <div class="container">
         <div class="columns is-centered">
           <div id="colored" class="column is-three-fifths">
-            <div class="field">
-              <label class="label">Choose Your Size:</label>
-              <div class="control">
-                <div class="columns">
-                  <div class="column has-text-centered">
-                    <label id="sizeSmall" class="radio">
-                      <input class="size" type="radio" name="size" value="12" />
-                      Small (12")
-                    </label>
-                  </div>
-                  <div class="column has-text-centered">
-                    <label id="sizeMedium" class="radio">
-                      <input class="size" type="radio" name="size" value="16" />
-                      Medium (16")
-                    </label>
-                  </div>
-                  <div class="column has-text-centered">
-                    <label id="sizeLarge" class="radio">
-                      <input class="size" type="radio" name="size" value="20" />
-                      Large (20")
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="columns">
-              <div class="column">
-                <div class="field">
-                  <label class="label">The Meats:</label>
-                  <div class="control">
-                    <label class="checkbox meats">
-                      <input type="checkbox" />
-                      Pepperoni
-                    </label>
-                    <label class="checkbox meats">
-                      <input type="checkbox" />
-                      Sausage
-                    </label>
-                    <label class="checkbox meats">
-                      <input type="checkbox" />
-                      Salami
-                    </label>
-                    <label class="checkbox meats">
-                      <input type="checkbox" />
-                      Proscuitto
-                    </label>
-                    <label class="checkbox meats">
-                      <input type="checkbox" />
-                      Anchovies
-                    </label>
+            <form>
+              <div class="field">
+                <label class="label">Choose Your Size:</label>
+                <div class="control">
+                  <div class="columns">
+                    <div class="column has-text-centered">
+                      <label id="sizeSmall" class="radio">
+                        <input
+                          class="size"
+                          type="radio"
+                          name="size"
+                          value="12"
+                        />
+                        Small (12")
+                      </label>
+                    </div>
+                    <div class="column has-text-centered">
+                      <label id="sizeMedium" class="radio">
+                        <input
+                          class="size"
+                          type="radio"
+                          name="size"
+                          value="16"
+                        />
+                        Medium (16")
+                      </label>
+                    </div>
+                    <div class="column has-text-centered">
+                      <label id="sizeLarge" class="radio">
+                        <input
+                          class="size"
+                          type="radio"
+                          name="size"
+                          value="20"
+                        />
+                        Large (20")
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="column">
-                <div class="field">
-                  <label class="label">The Cheeses:</label>
-                  <div class="control">
-                    <label class="checkbox cheeses">
-                      <input type="checkbox" />
-                      Mozarella
-                    </label>
-                    <label class="checkbox cheeses">
-                      <input type="checkbox" />
-                      Parmesan
-                    </label>
-                    <label class="checkbox cheeses">
-                      <input type="checkbox" />
-                      Asiago
-                    </label>
+              <div class="columns">
+                <div class="column">
+                  <div class="field">
+                    <label class="label">The Meats:</label>
+                    <div class="control">
+                      <label class="checkbox meats">
+                        <input class="meat" type="checkbox" />
+                        Pepperoni
+                      </label>
+                      <label class="checkbox meats">
+                        <input class="meat" type="checkbox" />
+                        Sausage
+                      </label>
+                      <label class="checkbox meats">
+                        <input class="meat" type="checkbox" />
+                        Salami
+                      </label>
+                      <label class="checkbox meats">
+                        <input class="meat" type="checkbox" />
+                        Proscuitto
+                      </label>
+                      <label class="checkbox meats">
+                        <input class="meat" type="checkbox" />
+                        Anchovies
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column">
+                  <div class="field">
+                    <label class="label">The Cheeses:</label>
+                    <div class="control">
+                      <label class="checkbox cheeses">
+                        <input class="cheese" type="checkbox" />
+                        Mozarella
+                      </label>
+                      <label class="checkbox cheeses">
+                        <input class="cheese" type="checkbox" />
+                        Parmesan
+                      </label>
+                      <label class="checkbox cheeses">
+                        <input class="cheese" type="checkbox" />
+                        Asiago
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column">
+                  <div class="field">
+                    <label class="label">The Veggies:</label>
+                    <div class="control">
+                      <label class="checkbox veggies">
+                        <input type="checkbox" />
+                        Tomatos
+                      </label>
+                      <label class="checkbox veggies">
+                        <input type="checkbox" />
+                        Mushrooms
+                      </label>
+                      <label class="checkbox veggies">
+                        <input type="checkbox" />
+                        Onions
+                      </label>
+                      <label class="checkbox veggies">
+                        <input type="checkbox" />
+                        Olives
+                      </label>
+                      <label class="checkbox veggies">
+                        <input type="checkbox" />
+                        Broccooli
+                      </label>
+                      <label class="checkbox veggies">
+                        <input type="checkbox" />
+                        Garlic
+                      </label>
+                      <label class="checkbox veggies">
+                        <input type="checkbox" />
+                        Basil
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="column">
-                <div class="field">
-                  <label class="label">The Veggies:</label>
-                  <div class="control">
-                    <label class="checkbox veggies">
-                      <input type="checkbox" />
-                      Tomatos
-                    </label>
-                    <label class="checkbox veggies">
-                      <input type="checkbox" />
-                      Mushrooms
-                    </label>
-                    <label class="checkbox veggies">
-                      <input type="checkbox" />
-                      Onions
-                    </label>
-                    <label class="checkbox veggies">
-                      <input type="checkbox" />
-                      Olives
-                    </label>
-                    <label class="checkbox veggies">
-                      <input type="checkbox" />
-                      Broccooli
-                    </label>
-                    <label class="checkbox veggies">
-                      <input type="checkbox" />
-                      Garlic
-                    </label>
-                    <label class="checkbox veggies">
-                      <input type="checkbox" />
-                      Basil
-                    </label>
-                  </div>
+              <div class="field">
+                <label class="label">Instructions:</label>
+                <div class="control">
+                  <textarea class="textarea" placeholder="Textarea"></textarea>
                 </div>
               </div>
-            </div>
 
-            <div class="field">
-              <label class="label">Instructions:</label>
-              <div class="control">
-                <textarea class="textarea" placeholder="Textarea"></textarea>
-              </div>
-            </div>
+              <div class="columns">
+                <div class="column is-one-third">
+                  <div class="field">
+                    <label class="label">Name:</label>
+                    <div class="control">
+                      <input
+                        class="input is-success"
+                        type="text"
+                        placeholder="your name"
+                      />
+                    </div>
+                  </div>
+                </div>
 
-            <div class="columns">
-              <div class="column is-one-third">
-                <div class="field">
-                  <label class="label">Name:</label>
-                  <div class="control">
-                    <input
-                      class="input is-success"
-                      type="text"
-                      placeholder="your name"
-                    />
+                <div class="column is-one-third">
+                  <div class="field">
+                    <label class="label">Email:</label>
+                    <div class="control">
+                      <input
+                        class="input is-success"
+                        type="text"
+                        placeholder="your email"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column is-one-third">
+                  <div class="field">
+                    <label class="label">Phone:</label>
+                    <div class="control">
+                      <input
+                        class="input is-success"
+                        type="text"
+                        placeholder="your phone"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="column is-one-third">
-                <div class="field">
-                  <label class="label">Email:</label>
-                  <div class="control">
-                    <input
-                      class="input is-success"
-                      type="text"
-                      placeholder="your email"
-                    />
-                  </div>
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-link">Submit</button>
+                </div>
+                <div class="control">
+                  <button class="button is-link is-light">Cancel</button>
                 </div>
               </div>
-
-              <div class="column is-one-third">
-                <div class="field">
-                  <label class="label">Phone:</label>
-                  <div class="control">
-                    <input
-                      class="input is-success"
-                      type="text"
-                      placeholder="your phone"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="field is-grouped">
-              <div class="control">
-                <button class="button is-link">Submit</button>
-              </div>
-              <div class="control">
-                <button class="button is-link is-light">Cancel</button>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
