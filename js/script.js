@@ -35,7 +35,6 @@ Pizza.prototype.updateMeats = (selectedMeats) => {
   selectedMeats.forEach((option) => {
     if (option.checked) {
       this.meats.push(option.value);
-      // console.log(option.innerText);
     }
   });
   return this.meats;
@@ -47,31 +46,21 @@ Pizza.prototype.updateCheeses = (selectedCheeses) => {
   selectedCheeses.forEach((option) => {
     if (option.checked) {
       this.cheeses.push(option.value);
-      // console.log(option.innerText);
     }
   });
   return this.cheeses;
 };
 
-//   Pizza.prototype.addCheeses() {
-//     cheese.forEach((option) => {
-//       if (option.checked) {
-//         cheeseCount += 1;
-//       }
-//     });
-//   };
-
-//   Pizza.prototype.addVeggies() {
-//     cheese.forEach((option) => {
-//       if (option.checked) {
-//         cheeseCount += 1;
-//       }
-//     });
-//   };
-
-//   Pizza.prototype.getSubtotal() {
-
-//   };
+// Prototype for updating selected veggies
+Pizza.prototype.updateVeggies = (selectedVeggies) => {
+  this.veggies = [];
+  selectedVeggies.forEach((option) => {
+    if (option.checked) {
+      this.veggies.push(option.value);
+    }
+  });
+  return this.veggies;
+};
 
 let pizza = new Pizza();
 
@@ -83,12 +72,10 @@ var form = document.querySelector("form");
 // set event listener for form to track changes
 form.addEventListener("change", () => {
   console.log("form change");
-  // console.log(pizza.setSize());
-  // console.log(`Size selected: ${pizza.size}`);
-  // console.log(pizza.updateMeats(selectedMeats));
-  // console.log(`Meats selected: ${pizza.meats}`);
-  console.log(pizza.updateCheeses(selectedCheeses));
-  console.log(`Cheeses selected: ${pizza.cheeses}`);
+  console.log(`Size selected: ${pizza.setSize()}`);
+  console.log(`Meats selected: ${pizza.updateMeats(selectedMeats)}`);
+  console.log(`Cheeses selected: ${pizza.updateCheeses(selectedCheeses)}`);
+  console.log(`Veggies selected: ${pizza.updateVeggies(selectedVeggies)}`);
 });
 
 // const basePrice = 10;
