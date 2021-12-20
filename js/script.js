@@ -64,6 +64,12 @@ Pizza.prototype.updateVeggies = (selectedVeggies) => {
 
 let pizza = new Pizza();
 
+// Utilities
+
+function roundMe(number) {
+  return Math.round(number * 100) / 100;
+}
+
 // // UI Logic
 
 // get form as a variable
@@ -77,7 +83,20 @@ form.addEventListener("change", () => {
   pizza.cheeses = pizza.updateCheeses(selectedCheeses);
   pizza.veggies = pizza.updateVeggies(selectedVeggies);
 
-  let basePrice = 10.0;
+  let basePrice = roundMe(10);
+  let subTotal =
+    basePrice * pizza.size +
+    pizza.meats.length * 1.5 * pizza.size +
+    pizza.cheeses.length * 1 * pizza.size +
+    pizza.veggies.length * 1 * pizza.size;
+
+  document.getElementById("subtotal").innerHTML = `$ ${roundMe(subTotal)}`;
+  document.getElementById("tax").innerHTML = `$ ${roundMe(
+    subTotal * 1.1 - subTotal
+  )}`;
+  document.getElementById("grandTotal").innerHTML = `$ ${roundMe(
+    subTotal * 1.1
+  )}`;
 });
 
 // const basePrice = 10;
