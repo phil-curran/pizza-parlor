@@ -35,17 +35,23 @@ Pizza.prototype.updateMeats = (selectedMeats) => {
   selectedMeats.forEach((option) => {
     if (option.checked) {
       this.meats.push(option.value);
+      // console.log(option.innerText);
     }
   });
+  return this.meats;
 };
 
-//   Pizza.prototype.addMeats() {
-//     meat.forEach((option) => {
-//       if (option.checked) {
-//         meatCount += 1.5;
-//       }
-//     });
-//   };
+// Prototype for updating selected cheeses
+Pizza.prototype.updateCheeses = (selectedCheeses) => {
+  this.cheeses = [];
+  selectedCheeses.forEach((option) => {
+    if (option.checked) {
+      this.cheeses.push(option.value);
+      // console.log(option.innerText);
+    }
+  });
+  return this.cheeses;
+};
 
 //   Pizza.prototype.addCheeses() {
 //     cheese.forEach((option) => {
@@ -77,8 +83,12 @@ var form = document.querySelector("form");
 // set event listener for form to track changes
 form.addEventListener("change", () => {
   console.log("form change");
-  console.log(pizza.setSize());
+  // console.log(pizza.setSize());
   // console.log(`Size selected: ${pizza.size}`);
+  // console.log(pizza.updateMeats(selectedMeats));
+  // console.log(`Meats selected: ${pizza.meats}`);
+  console.log(pizza.updateCheeses(selectedCheeses));
+  console.log(`Cheeses selected: ${pizza.cheeses}`);
 });
 
 // const basePrice = 10;
