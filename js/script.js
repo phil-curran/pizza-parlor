@@ -72,10 +72,12 @@ var form = document.querySelector("form");
 // set event listener for form to track changes
 form.addEventListener("change", () => {
   console.log("form change");
-  console.log(`Size selected: ${pizza.setSize()}`);
-  console.log(`Meats selected: ${pizza.updateMeats(selectedMeats)}`);
-  console.log(`Cheeses selected: ${pizza.updateCheeses(selectedCheeses)}`);
-  console.log(`Veggies selected: ${pizza.updateVeggies(selectedVeggies)}`);
+  pizza.size = pizza.setSize();
+  pizza.meats = pizza.updateMeats(selectedMeats);
+  pizza.cheeses = pizza.updateCheeses(selectedCheeses);
+  pizza.veggies = pizza.updateVeggies(selectedVeggies);
+
+  let basePrice = 10.0;
 });
 
 // const basePrice = 10;
