@@ -98,6 +98,3 @@ form.addEventListener("change", () => {
     subTotal * 1.1
   )}`;
 });
-
-// const basePrice = 10;
-// const taxRate = 1.1;
