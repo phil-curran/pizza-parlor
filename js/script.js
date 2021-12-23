@@ -1,24 +1,16 @@
 // Biz Logic
 
-// get size from form
-let getSize = document.getElementsByClassName("size");
-// get meat selections from form
-let selectedMeats = Array.from(document.getElementsByClassName("meat"));
-// get cheese selections from form
-let selectedCheeses = Array.from(document.getElementsByClassName("cheese"));
-// get veggies selections from form
-let selectedVeggies = Array.from(document.getElementsByClassName("veggie"));
-
 // main Pizza object
 function Pizza() {
   this.size = undefined;
   this.meats = [];
   this.cheeses = [];
   this.veggies = [];
+  this.basePrice = 10;
 }
 
 // Prototype for updating size
-Pizza.prototype.setSize = () => {
+Pizza.prototype.setSize = (getSize) => {
   if (getSize[0].checked) {
     this.size = 1;
   } else if (getSize[1].checked) {
@@ -62,7 +54,8 @@ Pizza.prototype.updateVeggies = (selectedVeggies) => {
   return this.veggies;
 };
 
-let pizza = new Pizza();
+// Prototype for calculating price
+Pizza.prototype.calculatePrice = () => {};
 
 // Utilities
 
@@ -77,15 +70,25 @@ var form = document.querySelector("form");
 
 // set event listener for form to track changes
 form.addEventListener("change", () => {
-  console.log("form change");
-  pizza.size = pizza.setSize();
+  let pizza = new Pizza();
+
+  // get size from form
+  let getSize = document.getElementsByClassName("size");
+  // get meat selections from form
+  let selectedMeats = Array.from(document.getElementsByClassName("meat"));
+  // get cheese selections from form
+  let selectedCheeses = Array.from(document.getElementsByClassName("cheese"));
+  // get veggies selections from form
+  let selectedVeggies = Array.from(document.getElementsByClassName("veggie"));
+
+  // get updated values from form on form.change
+  pizza.size = pizza.setSize(getSize);
   pizza.meats = pizza.updateMeats(selectedMeats);
   pizza.cheeses = pizza.updateCheeses(selectedCheeses);
   pizza.veggies = pizza.updateVeggies(selectedVeggies);
 
-  let basePrice = roundMe(10);
   let subTotal =
-    basePrice * pizza.size +
+    pizza.basePrice * pizza.size +
     pizza.meats.length * 1.5 * pizza.size +
     pizza.cheeses.length * 1 * pizza.size +
     pizza.veggies.length * 1 * pizza.size;
